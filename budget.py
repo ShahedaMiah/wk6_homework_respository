@@ -1,22 +1,23 @@
 class Budget:
+# creating a class celled 'Budget' in a module called 'budget'
 
     def __init__(self, opening_balance):
         self.__balance = opening_balance
 
-    def income(self, amount):
+    def add_income(self, amount):
         self.__balance += amount
         return
 
-    def rent(self, amount):
+    def minus_rent(self, amount):
         self.__balance -= amount
 
-    def council_tax(self, amount):
+    def minus_council_tax(self, amount):
         self.__balance -= amount
 
-    def utilities(self, amount):
+    def minus_utilities(self, amount):
         self.__balance -= amount
 
-    def bonus(self, amount):
+    def add_bonus(self, amount):
         self.__balance += amount
 
     def closing_balance(self):
@@ -27,10 +28,11 @@ class Budget:
 
 def main():
     jodie = Budget(1000)
-    jodie.income(700)
-    jodie.rent(300)
-    jodie.utilities(50)
-    jodie.council_tax(15)
+    # here we are instantiating an object called 'jodie' from the class (template) 'Budget'
+    jodie.add_income(700)
+    jodie.minus_rent(300)
+    jodie.minus_utilities(50)
+    jodie.minus_council_tax(15)
     print("Jodie has", jodie.closing_balance())
 
 if __name__ == "__main__":
